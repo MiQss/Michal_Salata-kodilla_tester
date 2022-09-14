@@ -26,7 +26,7 @@ public class Notebook {
             System.out.println("Urządzenie jest bardzo ciężkie.");
         }
     }
-        public void checkPriceandYear() {
+        public void checkPriceAndYear() {
             if (this.year > 2010 && this.price <1500){
                 System.out.println("Niezły sprzęt.");
             } else if (this.year < 2005 && this.price <600) {

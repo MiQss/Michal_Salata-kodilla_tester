@@ -5,19 +5,19 @@ public class FirstClass {
         System.out.println(notebook.weight + " " + notebook.price + " " + notebook.year);
         notebook.checkPrice();
         notebook.checkWeight();
-        notebook.checkPriceandYear();
+        notebook.checkPriceAndYear();
 
         Notebook heavyNotebook = new Notebook(2000, 1500,2020);
         System.out.println(heavyNotebook.weight + " " + heavyNotebook.price+ " " + heavyNotebook.year);
         heavyNotebook.checkPrice();
         heavyNotebook.checkWeight();
-        heavyNotebook.checkPriceandYear();
+        heavyNotebook.checkPriceAndYear();
 
         Notebook oldNotebook = new Notebook(1600, 500, 2000);
         System.out.println(oldNotebook.weight + " " + oldNotebook.price+ " " + oldNotebook.year);
         oldNotebook.checkPrice();
         oldNotebook.checkWeight();
-        oldNotebook.checkPriceandYear();
+        oldNotebook.checkPriceAndYear();
 
     }
 }
