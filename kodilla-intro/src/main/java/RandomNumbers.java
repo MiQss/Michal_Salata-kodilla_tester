@@ -1,8 +1,8 @@
 import java.util.Random;
 
 public class RandomNumbers {
-    int i = 30;
-    int j = 0;
+    int min = 30;
+    int max = 0;
 
     public int random() {
         Random random = new Random();
@@ -13,20 +13,20 @@ public class RandomNumbers {
             sum = sum + temp;
             result++;
             System.out.println(sum);
-            if (i>temp){
-                i=temp;
+            if (min>temp){
+                min=temp;
             }
-            if (j<temp){
-                i=temp;
+            if (max<temp){
+                max=temp;
             }
         }
         return result;
     }
     public int minimum(){
-        return i;
+        return min;
     }
     public int maksimum(){
-        return j;
+        return max;
     }
     }
 
