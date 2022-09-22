@@ -7,13 +7,13 @@ public class Book {
         this.title=title;
     }
 
-    public static String of (String author, String title){
+    public static Book of (String author, String title){
        Book book =new Book(author,title);
        System.out.println(book.author+" "+book.title);
-        return book.toString();
+        return book;
     }
     public static void main (String[]args){
-        String book = Book.of("Isaac Asimov", "The Galaxy");;
+        Book book = Book.of("Isaac Asimov", "The Galaxy");;
     }
 
 }
