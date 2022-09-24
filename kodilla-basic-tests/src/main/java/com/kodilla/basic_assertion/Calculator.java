@@ -7,7 +7,7 @@ public class Calculator {
     public int subtract(int a, int b){
         return a-b;
     }
-    public int squared (int a){
-        return a^2;
+    public double squared (double a){
+        return Math.pow(a,2);
     }
 }

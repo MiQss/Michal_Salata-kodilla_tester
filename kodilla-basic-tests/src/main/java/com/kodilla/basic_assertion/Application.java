@@ -22,8 +22,8 @@ public class Application {
             System.out.println("Metoda subtract nie działa poprawnie dla liczb " + a + " i " + b);
         }
 
-        int squaredResult = calculator.squared(a);
-        boolean correctSqu=ResultChecker.assertEquals(25,squaredResult);
+        double squaredResult = calculator.squared(a);
+        boolean correctSqu=ResultChecker.assertEquals(25, (int) squaredResult);
         if (correctSqu) {
             System.out.println("Metoda squared działa poprawnie dla liczby " + a);
         } else {
