@@ -5,15 +5,15 @@ public class Square extends Shape{
         super(2, 0, 0,0);
     }
     @Override
-    public void obliczPole() {
-        double pole;
-        pole = Math.pow(getA(),2);
-        System.out.println("Pole kwadratu wynosi: " +pole);
+    public void calculateArea() {
+        double area;
+        area = Math.pow(getA(),2);
+        System.out.println("Pole kwadratu wynosi: " +area);
     }
     @Override
-    public void obliczObwód() {
-        double obwód;
-        obwód = 4*getA();
-        System.out.println("Obwód kwadratu wynosi: " +obwód);
+    public void calculatePerimeter() {
+        double perimeter;
+        perimeter = 4*getA();
+        System.out.println("Obwód kwadratu wynosi: " +perimeter);
     }
 }

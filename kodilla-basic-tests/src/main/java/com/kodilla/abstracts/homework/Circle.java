@@ -6,16 +6,16 @@ public class Circle extends Shape{
     }
 
     @Override
-    public void obliczPole() {
-        double pole;
-        pole = getPI()*Math.pow(getR(),2);
-        System.out.println("Pole koła wynosi: " +pole);
+    public void calculateArea() {
+        double area;
+        area = getPI()*Math.pow(getR(),2);
+        System.out.println("Pole koła wynosi: " +area);
     }
 
     @Override
-    public void obliczObwód() {
-        double obwód;
-        obwód = 2*getPI()*getR();
-        System.out.println("Obwód koła wynosi: " +obwód);
+    public void calculatePerimeter() {
+        double perimeter;
+        perimeter = 2*getPI()*getR();
+        System.out.println("Obwód koła wynosi: " +perimeter);
     }
 }

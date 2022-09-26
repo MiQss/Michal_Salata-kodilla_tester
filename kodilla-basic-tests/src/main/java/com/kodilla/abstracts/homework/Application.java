@@ -3,15 +3,15 @@ package com.kodilla.abstracts.homework;
 public class Application {
     public static void main(String[] args) {
         Shape square =new Square();
-        square.obliczPole();
-        square.obliczObwód();
+        square.calculateArea();
+        square.calculatePerimeter();
 
         Shape rectangle = new Rectangle();
-        rectangle.obliczPole();
-        rectangle.obliczObwód();
+        rectangle.calculateArea();
+        rectangle.calculatePerimeter();
 
         Shape circle=new Circle();
-        circle.obliczPole();
-        circle.obliczObwód();
+        circle.calculateArea();
+        circle.calculatePerimeter();
     }
 }

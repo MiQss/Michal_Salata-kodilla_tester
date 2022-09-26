@@ -24,6 +24,6 @@ public abstract class Shape{
         public double getB(){
         return b;
     }
-    public abstract void obliczPole();
-    public abstract void obliczObwód();
+    public abstract void calculateArea();
+    public abstract void calculatePerimeter();
 }

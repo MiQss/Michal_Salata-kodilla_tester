@@ -6,16 +6,16 @@ public class Rectangle extends Shape{
     }
 
     @Override
-    public void obliczPole() {
-        double pole;
-        pole = getA()*getB();
-        System.out.println("Pole prostokątu wynosi: " +pole);
+    public void calculateArea() {
+        double area;
+        area = getA()*getB();
+        System.out.println("Pole prostokątu wynosi: " +area);
     }
 
     @Override
-    public void obliczObwód() {
-        double obwód;
-        obwód = 2*getA()+2*getB();
-        System.out.println("Obwód prostokątu wynosi: " +obwód);
+    public void calculatePerimeter() {
+        double perimeter;
+        perimeter = 2*getA()+2*getB();
+        System.out.println("Obwód prostokątu wynosi: " +perimeter);
     }
 }
