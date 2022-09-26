@@ -1,7 +1,7 @@
 package com.kodilla.abstracts.homework;
 
-public class Kolo extends Shape{
-    public Kolo() {
+public class Circle extends Shape{
+    public Circle() {
         super(0, 2, 3.14, 0);
     }
 

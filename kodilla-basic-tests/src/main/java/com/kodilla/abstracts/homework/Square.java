@@ -1,7 +1,7 @@
 package com.kodilla.abstracts.homework;
 
-public class Kwadrat extends Shape{
-    public Kwadrat() {
+public class Square extends Shape{
+    public Square() {
         super(2, 0, 0,0);
     }
     @Override

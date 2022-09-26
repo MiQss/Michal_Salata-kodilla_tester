@@ -2,16 +2,16 @@ package com.kodilla.abstracts.homework;
 
 public class Application {
     public static void main(String[] args) {
-        Shape kwadrat =new Kwadrat();
-        kwadrat.obliczPole();
-        kwadrat.obliczObwód();
+        Shape square =new Square();
+        square.obliczPole();
+        square.obliczObwód();
 
-        Shape prostokat = new Prostokat();
-        prostokat.obliczPole();
-        prostokat.obliczObwód();
+        Shape rectangle = new Rectangle();
+        rectangle.obliczPole();
+        rectangle.obliczObwód();
 
-        Shape kolo=new Kolo();
-        kolo.obliczPole();
-        kolo.obliczObwód();
+        Shape circle=new Circle();
+        circle.obliczPole();
+        circle.obliczObwód();
     }
 }

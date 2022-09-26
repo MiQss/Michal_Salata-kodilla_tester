@@ -1,7 +1,7 @@
 package com.kodilla.abstracts.homework;
 
-public class Prostokat extends Shape{
-    public Prostokat() {
+public class Rectangle extends Shape{
+    public Rectangle() {
         super(2, 0, 0, 3);
     }
 
