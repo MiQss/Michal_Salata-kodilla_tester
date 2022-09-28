@@ -24,38 +24,38 @@ public class BankTestSuite {
         bank.addMachines(machineTwo);
         machineOne.add(400.50);
         machineOne.add(-200.50);
-        machineTwo.add(400.50);
-        machineTwo.add(-200.50);
+        machineTwo.add(600.50);
+        machineTwo.add(-300.50);
 
-        assertEquals(400, bank.totalBalance(), 0.01);
+        assertEquals(500, bank.totalBalance(), 0.01);
     }
     @Test
-    public void shouldCalculateTotalPayment() {
+    public void shouldCalculateTotalAveragePayment() {
         Bank bank = new Bank();
         CashMachine machineOne = new CashMachine("machineOne");
         CashMachine machineTwo = new CashMachine("machineTwo");
         bank.addMachines(machineOne);
         bank.addMachines(machineTwo);
         machineOne.add(400.00);
-        machineOne.add(-200.00);
-        machineTwo.add(400.00);
+        machineOne.add(200.00);
+        machineTwo.add(600.00);
         machineTwo.add(-200.00);
 
-        assertEquals(400, bank.totalAveragePayment(), 0.01);
+        assertEquals(450, bank.totalAveragePayment(), 0.01);
     }
     @Test
-    public void shouldCalculateTotalWithdrawal() {
+    public void shouldCalculateTotalAverageWithdrawal() {
         Bank bank = new Bank();
         CashMachine machineOne = new CashMachine("machineOne");
         CashMachine machineTwo = new CashMachine("machineTwo");
         bank.addMachines(machineOne);
         bank.addMachines(machineTwo);
-        machineOne.add(400.00);
+        machineOne.add(200.00);
         machineOne.add(-200.00);
-        machineTwo.add(400.00);
-        machineTwo.add(-200.00);
+        machineTwo.add(-300.00);
+        machineTwo.add(600.00);
 
-        assertEquals(-200, bank.totalAverageWithdrawal(), 0.01);
+        assertEquals(-250, bank.totalAverageWithdrawal(), 0.01);
     }
     @Test
     public void shouldCalculateNumberOfTotalPayment() {
@@ -80,13 +80,13 @@ public class BankTestSuite {
         CashMachine machineTwo = new CashMachine("machineTwo");
         bank.addMachines(machineOne);
         bank.addMachines(machineTwo);
-        machineOne.add(400.50);
         machineOne.add(-400.50);
-        machineOne.add(-200.50);
-        machineTwo.add(400.50);
+        machineOne.add(-400.50);
+        machineOne.add(200.50);
+        machineTwo.add(-400.50);
         machineTwo.add(-400.50);
         machineTwo.add(-200.50);
 
-        assertEquals(4, bank.totalNumberWithdrawal(), 0.01);
+        assertEquals(5, bank.totalNumberWithdrawal(), 0.01);
     }
 }

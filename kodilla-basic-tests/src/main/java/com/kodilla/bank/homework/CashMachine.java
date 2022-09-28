@@ -34,17 +34,6 @@ public class CashMachine {
         return sum;
     }
 
-    public int howManyTransactions() {
-        if (this.size == 0) {
-            return 0;
-        }
-        int number = 0;
-        for (int i = 0; i < this.size; i++) {
-            number = this.size;
-        }
-        return number;
-    }
-
     public double getAverageWithdrawal() {
 
         if (this.transactions.length == 0) {
@@ -56,7 +45,7 @@ public class CashMachine {
                 sum += this.transactions[i];
             }
         }
-        return sum / this.transactions.length;
+        return sum / howManyWithdrawal();
     }
     public double getAveragePayment() {
 
@@ -69,7 +58,7 @@ public class CashMachine {
                 sum += this.transactions[i];
             }
         }
-        return sum / this.transactions.length;
+        return sum / howManyPayment();
     }
     public int howManyPayment() {
         if (this.size == 0) {

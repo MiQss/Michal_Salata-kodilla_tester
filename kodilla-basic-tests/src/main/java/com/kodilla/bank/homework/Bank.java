@@ -40,7 +40,7 @@ public class Bank {
         for(int i = 0; i < size; i++){
             sum+=cashmachines[i].getAveragePayment();
         }
-        return sum;
+        return sum/getNumberOfCashMachines();
     }
     public double totalAverageWithdrawal(){
         if (size ==0){
@@ -50,7 +50,7 @@ public class Bank {
         for(int i = 0; i < size; i++){
             sum+=cashmachines[i].getAverageWithdrawal();
         }
-        return sum;
+        return sum/getNumberOfCashMachines();
     }
     public int totalNumberPayment(){
         if (size ==0){

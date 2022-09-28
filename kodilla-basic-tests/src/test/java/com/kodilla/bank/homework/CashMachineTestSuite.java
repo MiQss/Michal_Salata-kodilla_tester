@@ -32,19 +32,10 @@ public class CashMachineTestSuite {
         assertEquals(200, cashMachine.balance(), 0.01);
     }
     @Test
-    public void shouldCalculateNumberOfTransaction() {
-        CashMachine cashMachine = new CashMachine("machineOne");
-        cashMachine.add(400.50);
-        cashMachine.add(400.50);
-        cashMachine.add(-200.50);
-
-        assertEquals(3, cashMachine.howManyTransactions(), 0.01);
-    }
-    @Test
     public void shouldCalculateAverageWithdrawal() {
         CashMachine cashMachine = new CashMachine("machineOne");
         cashMachine.add(-200.00);
-        cashMachine.add(-300.00);
+        cashMachine.add(300.00);
         cashMachine.add(-400.00);
 
         assertEquals(-300.00, cashMachine.getAverageWithdrawal(), 0.01);
@@ -52,11 +43,11 @@ public class CashMachineTestSuite {
     @Test
     public void shouldCalculateAveragePayment() {
         CashMachine cashMachine = new CashMachine("machineOne");
-        cashMachine.add(200.00);
+        cashMachine.add(-200.00);
         cashMachine.add(300.00);
         cashMachine.add(400.00);
 
-        assertEquals(300.00, cashMachine.getAveragePayment(), 0.01);
+        assertEquals(350.00, cashMachine.getAveragePayment(), 0.01);
     }
     @Test
     public void shouldCalculateNumberOfPayment() {
@@ -72,8 +63,8 @@ public class CashMachineTestSuite {
         CashMachine cashMachine = new CashMachine("machineOne");
         cashMachine.add(-400.50);
         cashMachine.add(400.50);
-        cashMachine.add(-200.50);
+        cashMachine.add(200.50);
 
-        assertEquals(2, cashMachine.howManyWithdrawal(), 0.01);
+        assertEquals(1, cashMachine.howManyWithdrawal(), 0.01);
     }
 }
