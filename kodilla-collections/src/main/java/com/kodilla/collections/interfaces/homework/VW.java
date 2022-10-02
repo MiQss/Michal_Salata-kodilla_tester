@@ -25,4 +25,13 @@ public class VW implements Car {
     public void decreaseSpeed() {
         speed+=brakes;
     }
+
+    @Override
+    public String toString() {
+        return "VW{" +
+                "speed=" + speed +
+                ", acceleration=" + acceleration +
+                ", brakes=" + brakes +
+                '}';
+    }
 }

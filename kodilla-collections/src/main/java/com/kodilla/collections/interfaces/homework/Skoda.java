@@ -27,4 +27,13 @@ public class Skoda implements Car{
     public void decreaseSpeed() {
         speed+=brakes;
     }
+
+    @Override
+    public String toString() {
+        return "Skoda{" +
+                "speed=" + speed +
+                ", acceleration=" + acceleration +
+                ", brakes=" + brakes +
+                '}';
+    }
 }

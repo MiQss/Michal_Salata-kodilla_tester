@@ -26,4 +26,14 @@ public class Porsche implements Car{
     public void decreaseSpeed() {
         speed+=brakes;
     }
+
+    @Override
+    public String toString() {
+        return "Porsche{" +
+                "speed=" + speed +
+                ", acceleration=" + acceleration +
+                ", brakes=" + brakes +
+                '}';
+    }
+
 }
