@@ -9,7 +9,7 @@ public class UsersManager {
         System.out.println(chemistGroupUsernames);
     }
 
-    private static List<String> filterChemistGroupUsernames() {
+    public static List<String> filterChemistGroupUsernames() {
         List<String> usernames = UsersRepository.getUsersList()
                 .stream()
                 .filter(user -> user.getGroup().equals("Chemists"))
