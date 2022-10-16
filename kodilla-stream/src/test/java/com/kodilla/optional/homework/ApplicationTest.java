@@ -1,12 +1,6 @@
 package com.kodilla.optional.homework;
 
-import com.kodilla.stream.UsersManager;
 import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ApplicationTest {

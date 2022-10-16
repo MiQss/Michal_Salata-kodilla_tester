@@ -1,7 +1,5 @@
 package com.kodilla.optional.homework;
 
-import com.kodilla.stream.User;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -24,8 +22,7 @@ public class Application {
         }
         public static String getTeacherName(Student student){
             Optional<Teacher> optionalTeacher = Optional.ofNullable(student.getTeacher());
-            String teacherName = optionalTeacher.orElse(new Teacher("<undefined>")).getName();
-            return teacherName;
+            return optionalTeacher.orElse(new Teacher("<undefined>")).getName();
         }
     }
 
