@@ -17,8 +17,8 @@ public class ForumStatsTest {
         users.add(new User("Gus Firing", 49, 0, "Board"));
         users.add(new User("Gale Boetticher", 44, 2, "Chemists"));
         users.add(new User("Mike Ehrmantraut", 57, 0, "Security"));
-        double test=ForumStats.getAverageNumberOFPostForUsersOver40(users);
-        assertEquals(2.25,test);
+        double test = ForumStats.getAverageNumberOFPostForUsersOver40(users);
+        assertEquals(2.25, test);
     }
     @Test
     public void testAverageNumberOFPostForUsersUnder40() {
@@ -29,7 +29,7 @@ public class ForumStatsTest {
         users.add(new User("Gus Firing", 49, 0, "Board"));
         users.add(new User("Gale Boetticher", 44, 2, "Chemists"));
         users.add(new User("Mike Ehrmantraut", 57, 0, "Security"));
-        double test=ForumStats.getAverageNumberOFPostForUsersUnder40(users);
-        assertEquals(2382.0,test);
+        double test = ForumStats.getAverageNumberOFPostForUsersUnder40(users);
+        assertEquals(2382.0, test);
     }
 }
