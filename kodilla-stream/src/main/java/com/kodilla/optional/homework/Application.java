@@ -13,13 +13,12 @@ public class Application {
         studentsList.add(new Student("Ania Zdolna",new Teacher("Natalia Niemiecka")));
         studentsList.add(new Student("Marcin Boski",null));
 
-
-            for (Student student : studentsList) {
-                Optional<Teacher> optionalTeacher = Optional.ofNullable(student.getTeacher());
-                String teacherName = optionalTeacher.orElse(new Teacher("<undefined>")).getName();
-                System.out.println("uczeń: " + student.getName() + ", nauczyciel: " + teacherName);
-            }
+        for (Student student : studentsList) {
+            Optional<Teacher> optionalTeacher = Optional.ofNullable(student.getTeacher());
+            String teacherName = optionalTeacher.orElse(new Teacher("<undefined>")).getName();
+            System.out.println("uczeń: " + student.getName() + ", nauczyciel: " + teacherName);
         }
+    }
         public static String getTeacherName(Student student){
             Optional<Teacher> optionalTeacher = Optional.ofNullable(student.getTeacher());
             return optionalTeacher.orElse(new Teacher("<undefined>")).getName();
