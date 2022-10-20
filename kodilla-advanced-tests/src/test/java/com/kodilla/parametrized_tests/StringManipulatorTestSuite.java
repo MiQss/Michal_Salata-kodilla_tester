@@ -20,4 +20,10 @@ public class StringManipulatorTestSuite {
         public void shouldCalculateStringLengthWithoutSpaces(String input, int expected) {
                 assertEquals(expected, manipulator.getStringLengthWithoutSpaces(input));
         }
+
+        @ParameterizedTest
+        @CsvSource(value = {"te,st:1", "..OtHEr :0", "E,V,e,n.t:3", "null :0", "A:0"}, delimiter = ':')
+        public void shouldCountNumberOfCommas(String input, int expected) {
+                assertEquals(expected, manipulator.countNumberOfCommas(input));
+        }
 }
