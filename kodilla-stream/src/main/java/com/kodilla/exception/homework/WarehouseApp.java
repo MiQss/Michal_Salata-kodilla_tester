@@ -1,9 +1,6 @@
 package com.kodilla.exception.homework;
-
-import java.util.Set;
-
 public class WarehouseApp {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws OrderDoesntExistException {
         Warehouse.addOrder(new Order("1"));
         Warehouse.addOrder(new Order("2"));
         Warehouse.addOrder(new Order("3"));
