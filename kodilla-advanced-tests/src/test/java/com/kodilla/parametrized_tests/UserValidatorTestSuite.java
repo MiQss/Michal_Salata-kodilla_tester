@@ -11,7 +11,7 @@ public class UserValidatorTestSuite {
     private UserValidator user = new UserValidator();
 
     @ParameterizedTest
-    @EmptySource
+    @NullAndEmptySource
     public void shouldReturnFalseIfUsernameIsEmpty(String username) {
         assertFalse(user.validateUsername(username));
     }
@@ -29,7 +29,7 @@ public class UserValidatorTestSuite {
     }
 
     @ParameterizedTest
-    @NullSource
+    @NullAndEmptySource
     public void shouldReturnFalseIfEmailIsNull(String email) {
         assertFalse(user.validateEmail(email));
     }
