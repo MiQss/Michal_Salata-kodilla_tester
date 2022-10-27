@@ -1,19 +1,20 @@
 package com.kodilla.execution_model.homework;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class Shop {
-    private List<Order> orders = new ArrayList<>();
+    private Set<Order> orders = new HashSet<>();
 
     public void addOrder (Order order) {
         this.orders.add(order);
     }
     public Order getOrder(int index) {
         if (index >= 0 && index < orders.size()) {
-            return this.orders.get(index);
+            return (Order) this.orders.iterator();
         }
         return null;
     }
