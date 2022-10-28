@@ -12,12 +12,7 @@ public class Shop {
     public void addOrder (Order order) {
         this.orders.add(order);
     }
-    public Order getOrder(int index) {
-        if (index >= 0 && index < orders.size()) {
-            return (Order) this.orders.iterator();
-        }
-        return null;
-    }
+
     public double sumOrders() {
         double sum = 0;
         for (Order order : this.orders) {

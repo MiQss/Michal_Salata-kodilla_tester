@@ -8,7 +8,6 @@ import org.junit.jupiter.api.Test;
 import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class ShopTestSuite {
     Shop shop = new Shop();
@@ -29,12 +28,6 @@ public class ShopTestSuite {
         assertEquals(441.4, sumOfOrders);
     }
 
-    @Test
-    public void shouldReturnNullWhenPassingNegativeIndex() {
-        Order result = shop.getOrder(-2);
-
-        assertNull(result);
-    }
     @Test
     public void shouldReturnRightNumbersOfOrdersAccordingToMinMaxRange() {
         assertEquals(4,shop.getOrdersByMinMaxValue(30,140).size());
