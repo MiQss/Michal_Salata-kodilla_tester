@@ -10,7 +10,7 @@ public class WeatherNotification {
     private Map<Person, Set<Location>> personLocation = new HashMap<>();
 
     public void addSubscriber(Person person, Location location) {
-        personLocation.computeIfAbsent(person,k->new HashSet<>()).add(location);
+        personLocation.computeIfAbsent(person, k -> new HashSet<>()).add(location);
     }
     public void sendNotificationToAll(WeatherNotification weatherNotification) {
         personLocation.entrySet()
