@@ -6,9 +6,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class SimpleApplication {
 
-    @Autowired
     private SkypeMessageService messageService;
-
+    @Autowired
+    public void setMessageService(SkypeMessageService messageService) {
+        this.messageService = messageService;
+    }
     public String processMessage(String message, String receiver) {
         if (checkReceiver(receiver)) {
             return this.messageService.send(message, receiver);
