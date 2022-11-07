@@ -34,7 +34,7 @@ public class CarFactoryTestSuite {
         //when
         boolean result = car.hasHeadlightsTurnedOn();
         //then
-        if (LocalTime.now().isAfter(LocalTime.of(19,59,59))
+        if (LocalTime.now().isAfter(LocalTime.of(20,0,0))
                 && LocalTime.now().isBefore(LocalTime.of(6, 0, 0))){
             Assertions.assertTrue(result);
         } else
