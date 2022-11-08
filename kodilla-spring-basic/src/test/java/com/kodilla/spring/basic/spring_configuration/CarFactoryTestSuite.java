@@ -15,31 +15,27 @@ import java.util.List;
 public class CarFactoryTestSuite {
 
     @Test
-    public void shouldCreateRandomCar() {
-        //Given
+    public void shouldChooseCarByTheSeason() {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
         Car car = context.getBean(Car.class);
-        //When
-        String type = car.getCarType();
-        System.out.println(type);
-        //Then
-        List<String> possibleTypes = Arrays.asList("Cabrio", "Sedan", "SUV");
-        Assertions.assertTrue(possibleTypes.contains(type));
+        String carType = car.getCarType();
+        List<String> carTypes = Arrays.asList("Sedan", "SUV", "Cabrio");
+        Assertions.assertTrue(carTypes.contains(carType));
     }
+
     @Test
-    public void shouldPutTheLightsOnInDeclaredHours(){
-        //given
+    public void lightsAreOn() {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
         Car car = context.getBean(Car.class);
-        //when
-        boolean result = car.hasHeadlightsTurnedOn();
-        //then
-        if (LocalTime.now().isAfter(LocalTime.of(20,0,0))
-                && LocalTime.now().isBefore(LocalTime.of(6, 0, 0))){
-            Assertions.assertTrue(result);
-        } else
-            Assertions.assertFalse(result);
+        boolean lights = car.hasHeadlightsTurnedOn(LocalTime.of(22,0));
+        Assertions.assertTrue(lights);
+    }
 
-
+    @Test
+    public void lightAreOff() {
+        ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
+        Car car = context.getBean(Car.class);
+        boolean noLights = car.hasHeadlightsTurnedOn(LocalTime.of(14,0));
+        Assertions.assertFalse(noLights);
     }
 }
