@@ -13,7 +13,7 @@ public class FormTestApp {
         WebDriver driver = new ChromeDriver();
         driver.get("https://kodilla.com/pl/test/form");
 
-        WebElement yearCombo = driver.findElement(By.xpath("//select[3]")); // [4]
+        WebElement yearCombo = driver.findElement(By.xpath("//*[@id=\"birthday_wrapper\"]/select[3]")); // [4]
         Select yearSelect = new Select(yearCombo);
         yearSelect.selectByIndex(5);
     }
