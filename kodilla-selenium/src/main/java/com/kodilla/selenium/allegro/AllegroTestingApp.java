@@ -16,13 +16,16 @@ public class AllegroTestingApp {
         WebElement cookies = driver.findElement(By.xpath("//*[@id=\"opbox-gdpr-consents-modal\"]/div/div[2]/div/div[2]/button[1]"));
         cookies.click();
 
+        Thread.sleep(1000);
+
         WebElement searchField = driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div/div/div/div/div[3]/header/div/div/div/div/form/input"));
         searchField.sendKeys("Mavic mini");
+
+        Thread.sleep(1000);
 
         WebElement categoryCombo = driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div/div/div/div/div[3]/header/div/div/div/div/form/div[3]/div/select"));
         Select categorySelect = new Select(categoryCombo);
         categorySelect.selectByIndex(3);
-        categoryCombo.click();
         categoryCombo.submit();
 
     }
