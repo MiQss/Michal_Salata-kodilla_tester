@@ -11,25 +11,19 @@ public class AllegroTestingApp {
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.gecko.driver", "c:\\selenium-drivers\\firefox\\geckodriver.exe");    // [1]
         WebDriver driver = new FirefoxDriver();
-        driver.get("https://www.ebay.pl");
+        driver.get("https://allegro.pl/");
 
-       Thread.sleep(5000);
+        WebElement cookies = driver.findElement(By.xpath("//*[@id=\"opbox-gdpr-consents-modal\"]/div/div[2]/div/div[2]/button[1]"));
+        cookies.click();
 
-        WebElement okButton = driver.findElement(By.xpath("//*[@id=\"gdpr-banner-accept\"]"));
-        okButton.submit();
-        Thread.sleep(1000);
-
-        WebElement searchField = driver.findElement(By.xpath("//*[@id=\"gh-ac\"]")); // [4]
+        WebElement searchField = driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div/div/div/div/div[3]/header/div/div/div/div/form/input"));
         searchField.sendKeys("Mavic mini");
 
-        WebElement categoryCombo = driver.findElement(By.xpath("//*[@id=\"gh-cat\"]")); // [4]
+        WebElement categoryCombo = driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div/div/div/div/div[3]/header/div/div/div/div/form/div[3]/div/select"));
         Select categorySelect = new Select(categoryCombo);
-        categorySelect.selectByIndex(10);
-
-        WebElement searchButton = driver.findElement(By.xpath("//*[@id=\"gh-btn\"]"));
-        searchButton.submit();
-
-
+        categorySelect.selectByIndex(3);
+        categoryCombo.click();
+        categoryCombo.submit();
 
     }
 }
