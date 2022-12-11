@@ -11,7 +11,9 @@ repositories {
 dependencies {
     implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
     testImplementation group: 'junit', name: 'junit', version: '5.3'
-    implementation group: 'com.testautomationguru.ocular', name: 'ocular', version: '1.0.0.Alpha'
+    implementation (group: 'com.github.lewka', name: 'ocular', version: '1.0.5'){
+        exclude group: "net.sf", module: "jargs"
+    }
 
 
 }
